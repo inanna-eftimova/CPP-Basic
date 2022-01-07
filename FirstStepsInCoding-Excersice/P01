@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double num;
+    cin>>num;
+    double sum = num*1.79549;
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    cout<<sum<<endl;
+
+    return 0;
+}
