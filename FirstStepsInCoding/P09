@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+#include <iomanip>
+int main()
+{
+    double meters;
+    cin>>meters;
+    double sum = meters*7.61;
+    double sumAfterDiscount = sum-sum*0.18;
+    double discount = sum-sumAfterDiscount;
+    cout << fixed << setprecision(2) <<"The final price is: "<<sumAfterDiscount<<" lv."<<endl;
+    cout << fixed << setprecision(2) <<"The discount is: "<<discount<<" lv."<<endl;
+
+    return 0;
+}
