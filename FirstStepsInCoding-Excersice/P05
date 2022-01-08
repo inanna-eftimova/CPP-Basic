@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int packagesPencils;
+   cin>>packagesPencils;
+   int packagesMarkers;
+   cin>>packagesMarkers;
+   int liters;
+   cin>>liters;
+   double percent;
+   cin>>percent;
+   double sum = (packagesPencils*5.8+packagesMarkers*7.2+liters*1.2);
+   double finalSum = sum - sum*(percent/100);
+   cout<<finalSum;
+}
