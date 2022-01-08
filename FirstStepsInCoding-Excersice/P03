@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double depSum;
+    cin>>depSum;
+    int mounts;
+    cin>>mounts;
+    double percet;
+    cin>>percet;
+    double sum = depSum*percet/100/12;
+    double result = depSum + mounts*sum;
+    cout << result;
+}
