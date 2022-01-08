@@ -1,0 +1,17 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int chikenMenu, fishMenu, vegetarianMenu;
+   cin>>chikenMenu;
+   cin>>fishMenu;
+   cin>>vegetarianMenu;
+   double sum = chikenMenu*10.35+fishMenu*12.4+vegetarianMenu*8.15;
+   double desert = sum*0.2;
+   double finalSum = sum+desert+2.5;
+   cout<<finalSum;
+   
+}
