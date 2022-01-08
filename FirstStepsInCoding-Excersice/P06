@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int poliester;
+   cin >> poliester;
+   int color;
+   cin >> color;
+   int solvent;
+   cin >>solvent;
+   int hours;
+   cin>>hours;
+   double sum = (poliester+2)*1.5+(color + color*0.1)*14.5+solvent*5 + 0.4;
+   double pricePerHour = sum*0.3*hours;
+   double finalSum = sum+pricePerHour;
+   cout<<finalSum;
+   
+}
