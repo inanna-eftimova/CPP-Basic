@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int dogsFood, catsFood;
+   cin>>dogsFood>>catsFood;
+   double sum = dogsFood*2.50 + catsFood*4;
+   cout<<sum<<" lv.";
+
+    return 0;
+}
