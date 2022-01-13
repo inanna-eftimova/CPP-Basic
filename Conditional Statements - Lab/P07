@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double area;
+    double pi = 3.14159265359;
+    string type;
+    cin>>type;
+    if(type=="square"){
+        double a;
+        cin>>a;
+        area=a*a;
+    }else if(type=="rectangle"){
+        double a1, b1;
+        cin>>a1>>b1;
+        area=a1*b1;
+    }else if(type=="circle"){
+        double a3;
+        cin>>a3;
+        area = a3*a3*pi;
+    }else if(type=="triangle"){
+        double a2, b2;
+        cin>>a2>>b2;
+        area = a2*b2/2;
+    }
+
+    cout.setf(ios::fixed);
+    cout.precision(3);
+    cout<<area;
+    return 0;
+}
