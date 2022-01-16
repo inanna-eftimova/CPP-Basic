@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int sec1,sec2,sec3;
+    cin>>sec1>>sec2>>sec3;
+    int sum = sec1+sec2+sec3;
+    int hours = sum/60;
+    int minuts = sum - hours*60;
+    if(minuts<10){
+        cout<<hours<<":0"<<minuts;
+    }else{
+        cout<<hours<<":"<<minuts;
+    }
+
+    return 0;
+}
