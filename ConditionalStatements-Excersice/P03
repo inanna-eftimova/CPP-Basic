@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+
+   int hours,minutes;
+   cin>>hours>>minutes;
+   int sum = hours*60+minutes;
+   int after15 = sum+15;
+   int finalHours = after15/60;
+   int afterMinutes;
+   if(finalHours>=24){
+       afterMinutes = after15 - finalHours*60;
+       finalHours=0;
+   }else{
+       afterMinutes = after15 - finalHours*60;
+   }
+   
+   if(afterMinutes<10){
+       cout<<finalHours<<":0"<<afterMinutes;
+   }else {
+       cout<<finalHours<<":"<<afterMinutes;
+   }
+
+    return 0;
+}
