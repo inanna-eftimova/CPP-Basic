@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    string filmName;
+    getline(std::cin, filmName);
+    int episode,rest;
+    cin>>episode>>rest;
+    double lunch = rest/8.0;
+    double nature = rest/4.0;
+    double sum = rest - lunch - nature;
+    if(sum>=episode){
+        std::cout << "You have enough time to watch "<<filmName<<" and left with "<< ceil(sum-episode)<<" minutes free time." << std::endl;
+    }else{
+        cout<<"You don't have enough time to watch "<<filmName<<", you need "<< ceil(episode-sum)<<" more minutes.";
+    }
+    return 0;
+}
