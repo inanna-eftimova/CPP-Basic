@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   double budget;
+   cin>>budget;
+   int statist;
+   cin>>statist;
+   double outfitPrice;
+   cin>>outfitPrice;
+   if(statist>150){
+       outfitPrice-=outfitPrice*0.1;
+   }
+   double price = statist*outfitPrice + budget*0.1;
+   cout.setf(ios::fixed);
+    cout.precision(2);
+   if(budget<price){
+       std::cout << "Not enough money!" << std::endl;
+       cout<<"Wingard needs "<<price-budget<<" leva more.";
+   }else{
+       cout<<"Action!"<<endl;
+       cout<<"Wingard starts filming with "<<budget-price<<" leva left.";
+   }
+    return 0;
+}
