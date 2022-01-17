@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double budget;
+    cin>>budget;
+    int videocards,procesors,ram;
+    cin>>videocards>>procesors>>ram;
+    double sum = videocards*250 + procesors*(videocards*250*0.35) + ram*(videocards*250*0.1);
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    if(procesors<videocards){
+        sum-=sum*0.15;
+    }
+    if(budget>=sum){
+        cout<<"You have "<<budget-sum<<" leva left!";
+    }else{
+        cout<<"Not enough money! You need "<<sum-budget<<" leva more!";
+    }
+    return 0;
+}
