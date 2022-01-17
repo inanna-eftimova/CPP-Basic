@@ -1,0 +1,28 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double tourPrice;
+    cin>>tourPrice;
+    int puzzle,doll,bear,minion,truck;
+    cin>>puzzle>>doll>>bear>>minion>>truck;
+    int count = puzzle+doll+bear+minion+truck;
+    double sum = puzzle*2.6+doll*3+bear*4.1+minion*8.2+truck*2;
+    if(count>=50){
+        sum = sum - sum*0.25;
+    }
+    sum = sum-sum*0.1;
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    if(sum>=tourPrice){
+        double rent = sum-tourPrice;
+        cout<<"Yes! "<< rent <<" lv left.";
+    }else{
+        double rent = tourPrice-sum;
+        cout<<"Not enough money! "<< rent << " lv needed.";
+    }
+    return 0;
+}
