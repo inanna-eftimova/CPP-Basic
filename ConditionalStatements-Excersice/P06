@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  double record,lenth,timeInSeconds;
+  cin>>record>>lenth>>timeInSeconds;
+  double ivansLenth = lenth*timeInSeconds;
+  int otherMeters = lenth/15;
+  double allTime = ivansLenth+otherMeters*12.5;
+  cout.setf(ios::fixed);
+    cout.precision(2);
+  if(allTime<record){
+      cout<<"Yes, he succeeded! The new world record is "<<allTime<<" seconds.";
+  }else{
+      cout<<"No, he failed! He was "<<allTime-record<<" seconds slower.";
+  }
+    return 0;
+}
