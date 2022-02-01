@@ -1,0 +1,27 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <cmath>  
+using namespace std;
+
+int main()
+{
+   int oddSum = 0;
+   int eventSum = 0;
+   int n; cin>>n;
+   for (int i = 0; i < n; i++) {
+        int num; cin>>num;
+        if(i%2==0){
+            eventSum+=num;
+        }else{
+            oddSum+=num;
+        }
+   }
+   if(eventSum==oddSum){
+       cout<<"Yes"<<endl;
+       cout<<"Sum = "<<eventSum<<endl;
+   }else{
+       cout<<"No"<<endl;
+       cout<<"Diff = "<<abs(eventSum-oddSum)<<endl;
+   }
+    return 0;
+}
