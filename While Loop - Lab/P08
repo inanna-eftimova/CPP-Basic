@@ -1,0 +1,33 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string name; cin>>name;
+    double grade; cin>>grade;
+    int clas=1;
+    int counter = 0;
+    double sum = 0;
+    while(true){
+        if(grade<4.00){
+            counter++;
+            if(counter>1){
+                cout << name<<" has been excluded at "<<clas-1<<" grade" << endl;
+                return 0;
+            }
+        }
+        sum+=grade;
+        if(clas==12){
+            break;
+        }
+        clas++;
+        cin>>grade;
+    }
+    double av = sum/clas;
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    cout<<name<<" graduated. Average grade: "<<av<<endl;
+    return 0;
+}
