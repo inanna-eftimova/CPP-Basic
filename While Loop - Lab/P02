@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string name,pass; cin>>name>>pass;
+    string tekPass; cin>>tekPass;
+    while(tekPass!=pass){
+        cin>>tekPass;
+    }
+    cout<<"Welcome "<<name<<"!";
+
+    return 0;
+}
