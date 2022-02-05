@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int firstSum; cin>>firstSum;
+    int secondSum=0;
+    while(firstSum>secondSum){
+        int num;
+        cin>>num;
+        secondSum+=num;
+    }
+    cout<<secondSum;
+
+    return 0;
+}
