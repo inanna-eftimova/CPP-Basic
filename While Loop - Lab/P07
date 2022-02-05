@@ -1,0 +1,19 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string command;cin>>command;
+    int minNum = 2147483627;
+    while(command!="Stop"){
+        int num = stoi(command);
+        if(num<minNum){
+            minNum=num;
+        }
+        cin>>command;
+    }
+    std::cout << minNum << std::endl;
+    return 0;
+}
