@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string command;cin>>command;
+    int maxNum = -2147483627;
+    while(command!="Stop"){
+        int num = stoi(command);
+        if(num>maxNum){
+            maxNum=num;
+        }
+        cin>>command;
+    }
+    std::cout << maxNum << std::endl;
+    return 0;
+}
