@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string text; cin>>text;
+    double sum = 0;
+    while(text!="NoMoreMoney"){
+        double num = stof(text);
+        cout.setf(ios::fixed);
+        cout.precision(2);
+        if(num<0){
+            cout<<"Invalid operation!"<<endl;
+            break;
+        }else{
+            sum+=num;
+            cout<<"Increase: "<<num<<endl;
+        }
+        
+        cin>>text;
+    }
+      cout<<"Total: "<<sum;
+    return 0;
+}
