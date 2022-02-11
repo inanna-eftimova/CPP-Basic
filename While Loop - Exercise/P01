@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string aniBook; getline(cin, aniBook);
+    string book; getline (cin, book);
+    int counter = 0;
+    while(book!="No More Books"){
+        if(aniBook==book){
+            cout<<"You checked "<<counter<<" books and found it."<<endl;
+            return 0;
+        }
+        getline(cin, book);
+        counter++;
+    }
+    cout<<"The book you search is not here!"<<endl;
+    cout<<"You checked "<<counter<<" books."<<endl;
+
+    return 0;
+}
