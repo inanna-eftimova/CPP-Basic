@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   string type; cin>>type;
+   if(type=="dog"){
+       cout<<"mammal";
+   }else if(type=="snake" || type=="crocodile" || type=="tortoise"){
+       cout<<"reptile";
+   }else{
+       cout<<"unknown";
+   }
+
+    return 0;
+}
