@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   double age; cin>>age;
+   string p; cin>>p;
+   if(age<16){
+       if(p=="f"){
+           cout<<"Miss";
+       }else{
+           cout<<"Master";
+       }
+   }else{
+      if(p=="f"){
+           cout<<"Ms.";
+       }else{
+           cout<<"Mr.";
+       } 
+   }
+
+    return 0;
+}
