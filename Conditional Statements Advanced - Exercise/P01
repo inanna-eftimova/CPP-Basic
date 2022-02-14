@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string type; cin>>type;
+    int r,c; cin>>r>>c;
+    cout.setf(ios::fixed);
+    cout.precision(2);
+    if(type=="Premiere"){
+        cout<<r*c*12.00<<" leva";
+    }else if(type=="Normal"){
+        cout<<r*c*7.5<<" leva";
+    }else{
+        cout<<r*c*5.00<<" leva";
+    }
+
+    return 0;
+}
