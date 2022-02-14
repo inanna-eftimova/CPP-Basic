@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int temperature; cin>>temperature;
+    string text; cin>>text;
+    string outfit = "";
+    string shoes = "";
+    if(temperature>=10 &&temperature<=18){
+        if(text == "Morning"){
+            cout<<"It's "<<temperature<<" degrees, get your Sweatshirt and Sneakers.";
+            return 0;
+        }else if(text == "Afternoon"){
+            cout<<"It's "<<temperature<<" degrees, get your Shirt and Moccasins.";
+            return 0;
+        }else{
+            cout<<"It's "<<temperature<<" degrees, get your Shirt and Moccasins.";
+            return 0;
+        }
+    }else if(temperature>18&&temperature<=24){
+        if(text == "Morning"){
+            cout<<"It's "<<temperature<<" degrees, get your Shirt and Moccasins.";
+            return 0;
+        }else if(text == "Afternoon"){
+            cout<<"It's "<<temperature<<" degrees, get your T-Shirt and Sandals.";
+            return 0;
+        }else{
+            cout<<"It's "<<temperature<<" degrees, get your Shirt and Moccasins.";
+            return 0;
+        }
+    }else{
+        if(text == "Morning"){
+            cout<<"It's "<<temperature<<" degrees, get your T-Shirt and Sandals.";
+            return 0;
+        }else if(text == "Afternoon"){
+            cout<<"It's "<<temperature<<" degrees, get your Swim Suit and Barefoot.";
+            return 0;
+        }else{
+            cout<<"It's "<<temperature<<" degrees, get your Shirt and Moccasins.";
+            return 0;
+        }
+    }
+   
+    return 0;
+}
