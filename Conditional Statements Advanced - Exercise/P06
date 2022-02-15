@@ -1,0 +1,60 @@
+
+  
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numberOne; cin >> numberOne;
+    int numberTwo; cin >> numberTwo;
+    string operation; std::cin >> operation;
+    int result;
+    string secondResult;
+
+    if (operation == "+"){
+        result = numberOne + numberTwo;
+        if (result % 2 == 0){
+            secondResult = "even";
+        }else{
+            secondResult = "odd";
+        }
+        cout << numberOne << " " << operation << " " << numberTwo << " " << "= " << result << " - " << secondResult << endl;
+    }else if (operation == "-"){
+        result = numberOne - numberTwo;
+        if (result % 2 == 0){
+            secondResult = "even";
+        }else{
+            secondResult = "odd";
+        }
+        cout << numberOne << " " << operation << " " << numberTwo << " " << "= " << result << " - " << secondResult << endl;
+    }else if (operation == "*"){
+        result = numberOne * numberTwo;
+        if (result % 2 == 0){
+            secondResult = "even";
+        }else{
+            secondResult = "odd";
+        }
+        cout << numberOne << " " << operation << " " << numberTwo << " " << "= " << result << " - " << secondResult << endl;
+    }else if (operation == "/"){
+        if (numberTwo == 0){
+            cout << "Cannot divide " << numberOne << " by zero" << endl;
+        }else{
+            double result = (numberOne * 1.0) / numberTwo;
+            cout.setf(ios::fixed);
+            cout.precision(2);
+            cout << numberOne << " " << operation << " " << numberTwo << " " << "= " << result << endl;
+        } 
+    }else if (operation == "%"){
+        if (numberTwo == 0){
+            cout << "Cannot divide " << numberOne << " by zero" << endl;
+        }else{
+            result = numberOne % numberTwo;
+            cout.setf(ios::fixed);
+            cout.precision(2);
+            cout << numberOne << " " << operation << " " << numberTwo << " " << "= " << result << endl;
+        } 
+    }
+  
+
+    return 0;
+}
