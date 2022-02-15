@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+    string month; std::cin >> month;
+    int overnights; cin >> overnights;
+    double resultApartment = 0;
+    double resultStudio = 0;
+
+    if (month == "May" || month == "October")
+    {
+        resultStudio = overnights * 50;
+        resultApartment = overnights * 65;
+        if (overnights > 14)
+        {
+            resultStudio -= resultStudio * 0.3;
+            resultApartment -= resultApartment * 0.1;
+        }
+        else if (overnights > 7)
+        {
+            resultStudio -= resultStudio * 0.05;
+        }
+        
+    }
+    else if (month == "June" || month == "September")
+    {
+        resultApartment = overnights * 68.70;
+        resultStudio = overnights * 75.20;
+        if (overnights > 14)
+        {
+            resultStudio -= resultStudio * 0.2;
+            resultApartment -= resultApartment * 0.1;
+        }
+    }
+    else if (month == "July" || month == "August")
+    {
+        resultApartment = overnights * 77;
+        resultStudio = overnights * 76;
+        if (overnights > 14)
+        {
+            resultApartment -= resultApartment * 0.1;
+        }
+    }
+
+    cout.setf(ios::fixed);
+    cout.precision(2);
+
+    cout << "Apartment: " << resultApartment << " lv." << endl;
+    cout << "Studio: " << resultStudio << " lv." << endl;
+
+    return 0;
+}
