@@ -1,0 +1,24 @@
+#include <iostream>
+#include <climits>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   int beginning; cin>>beginning;
+   int end; cin>>end;
+   int magikNum; cin>>magikNum;
+   int num = 0;
+   int times = 0;
+   for (int i = beginning; i <= end; i++) {
+       for (int j = beginning; j <= end; j++) {
+           times++;
+          if(i+j==magikNum){
+              cout<<"Combination N:"<<times<<" ("<<i<<" + "<<j<<" = "<<magikNum<<")"<<endl;
+              return 0;
+          }
+       }
+   }
+   cout<<times<<" combinations - neither equals "<<magikNum<<endl;
+    return 0;
+}
