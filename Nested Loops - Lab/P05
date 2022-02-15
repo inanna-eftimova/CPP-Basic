@@ -1,0 +1,22 @@
+#include <iostream>
+#include <climits>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   string destination; cin>>destination;
+   int budget; 
+   int sum = 0;
+   while(destination!="End"){
+      cin>>budget;
+       while(budget>sum){
+           int num; cin>>num;
+           sum+=num;
+       }
+       cout<<"Going to "<<destination<<"!"<<endl;
+       sum=0;
+       cin>>destination;
+   }
+    return 0;
+}
