@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string fruitName; std::cin >> fruitName;
+    string weekDay; std::cin >> weekDay;
+    double quantity; cin >> quantity;
+    double price = 0.0;
+
+    if (weekDay == "Monday" || weekDay == "Tuesday" || weekDay == "Wednesday" || weekDay == "Thursday" || weekDay == "Friday"){
+        if (fruitName == "banana"){
+            price = 2.50;
+        }else if (fruitName == "apple"){
+            price = 1.20;      
+        }else if (fruitName == "orange"){
+            price = 0.85;       
+        }else if (fruitName == "grapefruit"){
+            price = 1.45;
+        }else if (fruitName == "kiwi"){
+            price = 2.70;
+        }else if (fruitName == "pineapple"){
+            price = 5.50;
+        }else if (fruitName == "grapes"){
+            price = 3.85;
+        }
+    }else if (weekDay == "Saturday" || weekDay == "Sunday"){
+        if (fruitName == "banana"){
+            price = 2.70;
+        }else if (fruitName == "apple"){
+            price = 1.25;
+        }else if (fruitName == "orange"){
+            price = 0.90;
+        }else if (fruitName == "grapefruit"){
+            price = 1.60;
+        }else if (fruitName == "kiwi"){
+            price = 3.00;
+        }else if (fruitName == "pineapple"){
+            price = 5.60;
+        }else if (fruitName == "grapes"){
+            price = 4.20;
+        }
+    }
+
+    if (price > 0) {
+        cout.setf(ios::fixed);
+        cout.precision(2);
+        cout << price * quantity << endl;
+    }else{
+        cout << "error" << endl;
+    }
+      
+        return 0;
+    }
