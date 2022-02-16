@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+int main()
+
+{
+    string cityName; std::cin >> cityName;
+    double sellsVolume; cin >> sellsVolume;
+    double sellsComission = 0;
+
+    if (cityName == "Sofia"){
+        if (sellsVolume >= 0 && sellsVolume <= 500){
+            sellsComission = (sellsVolume * 1.05) - sellsVolume;
+        }else if (sellsVolume > 500 && sellsVolume <= 1000){
+            sellsComission =  (sellsVolume * 1.07) - sellsVolume;
+        }else if (sellsVolume > 1000 && sellsVolume <= 10000){
+            sellsComission = (sellsVolume * 1.08) - sellsVolume;
+        }else if (sellsVolume > 1000){
+            sellsComission = (sellsVolume * 1.12) - sellsVolume;
+        }
+    }else if (cityName == "Varna"){
+        if (sellsVolume >= 0 && sellsVolume <= 500){
+            sellsComission = (sellsVolume * 1.045) - sellsVolume;
+        }else if (sellsVolume > 500 && sellsVolume <= 1000){
+            sellsComission = (sellsVolume * 1.075) - sellsVolume;
+        }else if (sellsVolume > 1000 && sellsVolume <= 10000){
+            sellsComission = (sellsVolume * 1.10) - sellsVolume;
+        }else if (sellsVolume > 1000){
+            sellsComission = (sellsVolume * 1.13) - sellsVolume;
+        }
+    }else if (cityName == "Plovdiv"){
+        if (sellsVolume >= 0 && sellsVolume <= 500){
+            sellsComission =(sellsVolume * 1.055) - sellsVolume; 
+        }else if (sellsVolume > 500 && sellsVolume <= 1000){
+            sellsComission = (sellsVolume * 1.08) - sellsVolume;
+        }else if (sellsVolume > 1000 && sellsVolume <= 10000){
+            sellsComission = (sellsVolume * 1.12) - sellsVolume;
+        }else if (sellsVolume > 1000){
+            sellsComission = (sellsVolume * 1.145) - sellsVolume;
+        }
+    }
+    cout.setf(ios::fixed);
+    cout.precision(2);
+
+    if (sellsComission > 0){
+        cout << sellsComission << endl;
+    }else{
+        cout << "error" << endl;
+    }
+
+    return 0;
+
+}
